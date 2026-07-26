@@ -14,6 +14,12 @@ app.get("/", (req, res) => {
   res.send("사주 API 서버가 실행 중입니다!");
 });
 
+app.get("/test", (req, res) => {
+  res.json({
+    ok: true,
+    message: "test route works"
+  });
+});
 
 const PORT = process.env.PORT || 3000;
 
