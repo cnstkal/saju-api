@@ -10,6 +10,13 @@ app.use(express.json());
 
 app.use("/saju", sajuRouter);
 
+app.post("/saju-test", (req,res)=>{
+  res.json({
+    ok:true,
+    message:"post works"
+  });
+});
+
 app.get("/", (req, res) => {
   res.send("사주 API 서버가 실행 중입니다!");
 });

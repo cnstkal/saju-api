@@ -10,6 +10,12 @@ const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use("/saju", saju_1.default);
+app.post("/saju-test", (req, res) => {
+    res.json({
+        ok: true,
+        message: "post works"
+    });
+});
 app.get("/", (req, res) => {
     res.send("사주 API 서버가 실행 중입니다!");
 });
