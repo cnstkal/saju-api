@@ -5,7 +5,7 @@ const generative_ai_1 = require("@google/generative-ai");
 async function analyzeWithAI(apiKey, sajuData, question = "전체 사주 풀이") {
     const genAI = new generative_ai_1.GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-        model: "gemini-3.0-flash"
+        model: "gemini-2.0-flash"
     });
     const prompt = `
 
