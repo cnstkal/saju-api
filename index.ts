@@ -11,6 +11,9 @@ app.get("/", (req, res) => {
   res.send("사주 API 서버가 실행 중입니다!");
 });
 
-app.listen(3000, () => {
-  console.log("사주 API 서버가 실행 중입니다!");
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`사주 API 서버가 실행 중입니다! PORT: ${PORT}`);
 });
